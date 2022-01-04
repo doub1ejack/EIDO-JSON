@@ -7,7 +7,12 @@ Cloned from the 911.gov repo so I could use...
 (thank you jasonformatter.org)
 .
 
-## NENA-JSON-EIDO
+## See also:
+
+- https://www.nena.org/page/i3_Stage3
+- https://nenawiki.org/wiki/EIDO_(Emergency_Incident_Data_Object)
+
+## About NENA-JSON-EIDO
 
 NENA WG JSON based EIDO
 
