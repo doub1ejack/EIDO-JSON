@@ -1,0 +1,2222 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome8",
+    "definitions": {
+        "200": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "content": {
+                    "$ref": "#/definitions/Content"
+                }
+            },
+            "required": [
+                "content",
+                "description"
+            ],
+            "title": "200"
+        },
+        "Welcome8": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "openapi": {
+                    "type": "string"
+                },
+                "info": {
+                    "$ref": "#/definitions/Info"
+                },
+                "servers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Server"
+                    }
+                },
+                "paths": {
+                    "$ref": "#/definitions/Paths"
+                },
+                "components": {
+                    "$ref": "#/definitions/Components"
+                }
+            },
+            "required": [
+                "components",
+                "info",
+                "openapi",
+                "paths",
+                "servers"
+            ],
+            "title": "Welcome8"
+        },
+        "Components": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "schemas": {
+                    "$ref": "#/definitions/Schemas"
+                }
+            },
+            "required": [
+                "schemas"
+            ],
+            "title": "Components"
+        },
+        "Schemas": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ReferenceType": {
+                    "$ref": "#/definitions/ReferenceType"
+                },
+                "PrologueType": {
+                    "$ref": "#/definitions/PrologueType"
+                },
+                "AgencyType": {
+                    "$ref": "#/definitions/AgencyType"
+                },
+                "AgentType": {
+                    "$ref": "#/definitions/AgentType"
+                },
+                "IncidentMergeDirectionCodeSimpleType": {
+                    "$ref": "#/definitions/DirectionCodeSimpleType"
+                },
+                "MergeInformationType": {
+                    "$ref": "#/definitions/MergeInformationType"
+                },
+                "LinkDirectionCodeSimpleType": {
+                    "$ref": "#/definitions/DirectionCodeSimpleType"
+                },
+                "LinkInformationType": {
+                    "$ref": "#/definitions/LinkInformationType"
+                },
+                "NotesType": {
+                    "$ref": "#/definitions/NotesType"
+                },
+                "AdditionalDataType": {
+                    "$ref": "#/definitions/AdditionalDataType"
+                },
+                "LocationInformationType": {
+                    "$ref": "#/definitions/LocationInformationType"
+                },
+                "PersonInformationType": {
+                    "$ref": "#/definitions/PersonInformationType"
+                },
+                "DispositionType": {
+                    "$ref": "#/definitions/DispositionType"
+                },
+                "VehicleInformationType": {
+                    "$ref": "#/definitions/VehicleInformationType"
+                },
+                "IncidentInformationType": {
+                    "$ref": "#/definitions/IncidentInformationType"
+                },
+                "UpdatedCBNType": {
+                    "$ref": "#/definitions/UpdatedCBNType"
+                },
+                "CallInformationType": {
+                    "$ref": "#/definitions/CallInformationType"
+                },
+                "CallbackType": {
+                    "$ref": "#/definitions/CallbackType"
+                },
+                "EmergencyResourceType": {
+                    "$ref": "#/definitions/EmergencyResourceType"
+                },
+                "DispatchInformationType": {
+                    "$ref": "#/definitions/DispatchInformationType"
+                },
+                "AlarmsSensorsType": {
+                    "$ref": "#/definitions/AlarmsSensorsType"
+                },
+                "EmergencyIncidentDataObjectType": {
+                    "$ref": "#/definitions/EmergencyIncidentDataObjectType"
+                }
+            },
+            "required": [
+                "AdditionalDataType",
+                "AgencyType",
+                "AgentType",
+                "AlarmsSensorsType",
+                "CallInformationType",
+                "CallbackType",
+                "DispatchInformationType",
+                "DispositionType",
+                "EmergencyIncidentDataObjectType",
+                "EmergencyResourceType",
+                "IncidentInformationType",
+                "IncidentMergeDirectionCodeSimpleType",
+                "LinkDirectionCodeSimpleType",
+                "LinkInformationType",
+                "LocationInformationType",
+                "MergeInformationType",
+                "NotesType",
+                "PersonInformationType",
+                "PrologueType",
+                "ReferenceType",
+                "UpdatedCBNType",
+                "VehicleInformationType"
+            ],
+            "title": "Schemas"
+        },
+        "AdditionalDataType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AdditionalDataTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "AdditionalDataType"
+        },
+        "AdditionalDataTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "properties": {
+                    "$ref": "#/definitions/PurpleProperties"
+                }
+            },
+            "required": [],
+            "title": "AdditionalDataTypeAllOf"
+        },
+        "PurpleProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "additionalDataByReferenceUrl": {
+                    "$ref": "#/definitions/ID"
+                },
+                "additionalDataByValue": {
+                    "$ref": "#/definitions/ID"
+                },
+                "urlPurpose": {
+                    "$ref": "#/definitions/ID"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "additionalDataByReferenceUrl",
+                "additionalDataByValue",
+                "notesReference",
+                "urlPurpose"
+            ],
+            "title": "PurpleProperties"
+        },
+        "ID": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "$ref": "#/definitions/IDType"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description",
+                "type"
+            ],
+            "title": "ID"
+        },
+        "NotesReference": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "$ref": "#/definitions/NotesReferenceType"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "items": {
+                    "$ref": "#/definitions/LinkDirectionCode"
+                }
+            },
+            "required": [
+                "description",
+                "items",
+                "type"
+            ],
+            "title": "NotesReference"
+        },
+        "LinkDirectionCode": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "$ref"
+            ],
+            "title": "LinkDirectionCode"
+        },
+        "AgencyType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AgencyTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "AgencyType"
+        },
+        "AgencyTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/FluffyProperties"
+                }
+            },
+            "required": [],
+            "title": "AgencyTypeAllOf"
+        },
+        "FluffyProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "agencyJcard": {
+                    "$ref": "#/definitions/ID"
+                },
+                "agencyRoleDescriptionRegistryText": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "incidentOwningAgencyIndicator": {
+                    "$ref": "#/definitions/ID"
+                },
+                "agencyType": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "agencyJcard",
+                "agencyRoleDescriptionRegistryText",
+                "agencyType",
+                "incidentOwningAgencyIndicator",
+                "notesReference"
+            ],
+            "title": "FluffyProperties"
+        },
+        "AgencyRoleDescriptionRegistryText": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "$ref": "#/definitions/NotesReferenceType"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "items": {
+                    "$ref": "#/definitions/Schema"
+                }
+            },
+            "required": [
+                "description",
+                "items",
+                "type"
+            ],
+            "title": "AgencyRoleDescriptionRegistryText"
+        },
+        "Schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "$ref": "#/definitions/IDType"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "Schema"
+        },
+        "AgentType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AgentTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "AgentType"
+        },
+        "AgentTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/TentacledProperties"
+                }
+            },
+            "required": [],
+            "title": "AgentTypeAllOf"
+        },
+        "TentacledProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "agentJcard": {
+                    "$ref": "#/definitions/ID"
+                },
+                "agentWorkstationPositionIdentification": {
+                    "$ref": "#/definitions/ID"
+                },
+                "agentRoleRegistryText": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "agencyReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "agencyReference",
+                "agentJcard",
+                "agentRoleRegistryText",
+                "agentWorkstationPositionIdentification",
+                "notesReference"
+            ],
+            "title": "TentacledProperties"
+        },
+        "UpdatedByAgencyReference": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "$ref": "#/definitions/Ref"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "$ref",
+                "description"
+            ],
+            "title": "UpdatedByAgencyReference"
+        },
+        "AlarmsSensorsType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AlarmsSensorsTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "AlarmsSensorsType"
+        },
+        "AlarmsSensorsTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "properties": {
+                    "$ref": "#/definitions/StickyProperties"
+                }
+            },
+            "required": [],
+            "title": "AlarmsSensorsTypeAllOf"
+        },
+        "StickyProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "csaaAlarmInformation": {
+                    "$ref": "#/definitions/ID"
+                },
+                "alarmUrl": {
+                    "$ref": "#/definitions/LastUpdateTimeStamp"
+                },
+                "agentReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "agentReference",
+                "alarmUrl",
+                "csaaAlarmInformation",
+                "notesReference"
+            ],
+            "title": "StickyProperties"
+        },
+        "LastUpdateTimeStamp": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description",
+                "format",
+                "type"
+            ],
+            "title": "LastUpdateTimeStamp"
+        },
+        "CallInformationType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CallInformationTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "CallInformationType"
+        },
+        "CallInformationTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/IndigoProperties"
+                }
+            },
+            "required": [],
+            "title": "CallInformationTypeAllOf"
+        },
+        "IndigoProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "relatedCallIdentifier": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "queueIdentifier": {
+                    "$ref": "#/definitions/ID"
+                },
+                "standardPrimaryCallType": {
+                    "$ref": "#/definitions/ID"
+                },
+                "standardSecondaryCallType": {
+                    "$ref": "#/definitions/ID"
+                },
+                "localCallType": {
+                    "$ref": "#/definitions/ID"
+                },
+                "direction": {
+                    "$ref": "#/definitions/Ion"
+                },
+                "additionalDataReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "callStartTimestamp": {
+                    "$ref": "#/definitions/LastUpdateTimeStamp"
+                },
+                "answerDate": {
+                    "$ref": "#/definitions/LastUpdateTimeStamp"
+                },
+                "callStateRegistryText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "callBackReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "verstat": {
+                    "$ref": "#/definitions/ID"
+                },
+                "sipIdentity": {
+                    "$ref": "#/definitions/ID"
+                },
+                "agentReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "locationReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "personReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "additionalDataReference",
+                "agentReference",
+                "answerDate",
+                "callBackReference",
+                "callStartTimestamp",
+                "callStateRegistryText",
+                "direction",
+                "localCallType",
+                "locationReference",
+                "notesReference",
+                "personReference",
+                "queueIdentifier",
+                "relatedCallIdentifier",
+                "sipIdentity",
+                "standardPrimaryCallType",
+                "standardSecondaryCallType",
+                "verstat"
+            ],
+            "title": "IndigoProperties"
+        },
+        "Ion": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "$ref": "#/definitions/IDType"
+                },
+                "enum": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description",
+                "enum",
+                "type"
+            ],
+            "title": "Ion"
+        },
+        "CallbackType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CallbackTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "CallbackType"
+        },
+        "CallbackTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "properties": {
+                    "$ref": "#/definitions/IndecentProperties"
+                }
+            },
+            "required": [],
+            "title": "CallbackTypeAllOf"
+        },
+        "IndecentProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "callBackInformationUri": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "deviceContactHeader": {
+                    "$ref": "#/definitions/ID"
+                },
+                "updatedCbn": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                }
+            },
+            "required": [
+                "callBackInformationUri",
+                "deviceContactHeader",
+                "updatedCbn"
+            ],
+            "title": "IndecentProperties"
+        },
+        "DispatchInformationType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DispatchInformationTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "DispatchInformationType"
+        },
+        "DispatchInformationTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "properties": {
+                    "$ref": "#/definitions/HilariousProperties"
+                }
+            },
+            "required": [],
+            "title": "DispatchInformationTypeAllOf"
+        },
+        "HilariousProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "agencyReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "agentReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "emergencyResourceReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "agencyReference",
+                "agentReference",
+                "emergencyResourceReference",
+                "notesReference"
+            ],
+            "title": "HilariousProperties"
+        },
+        "DispositionType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DispositionTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "DispositionType"
+        },
+        "DispositionTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/AmbitiousProperties"
+                }
+            },
+            "required": [],
+            "title": "DispositionTypeAllOf"
+        },
+        "AmbitiousProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dispositionCommonRegistryCode": {
+                    "$ref": "#/definitions/ID"
+                },
+                "dispositionPrimaryIndicator": {
+                    "$ref": "#/definitions/ID"
+                },
+                "dispositionCategoryText": {
+                    "$ref": "#/definitions/Schema"
+                },
+                "dispositionDescriptionText": {
+                    "$ref": "#/definitions/Schema"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "dispositionCategoryText",
+                "dispositionCommonRegistryCode",
+                "dispositionDescriptionText",
+                "dispositionPrimaryIndicator",
+                "notesReference"
+            ],
+            "title": "AmbitiousProperties"
+        },
+        "EmergencyIncidentDataObjectType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/EmergencyIncidentDataObjectTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "EmergencyIncidentDataObjectType"
+        },
+        "EmergencyIncidentDataObjectTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/CunningProperties"
+                }
+            },
+            "required": [],
+            "title": "EmergencyIncidentDataObjectTypeAllOf"
+        },
+        "CunningProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "eidoVersion": {
+                    "$ref": "#/definitions/Ion"
+                },
+                "issuingElementIdentification": {
+                    "$ref": "#/definitions/ID"
+                },
+                "mergeComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "linkComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "incidentComponent": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "callComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "callbackComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "dispatchComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "alarmsSensorsComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "agencyComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "agentComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "notesComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "additionalDataComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "locationComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "personComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "vehicleComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "emergencyResourceComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "@context": {
+                    "$ref": "#/definitions/Context"
+                }
+            },
+            "required": [
+                "@context",
+                "additionalDataComponent",
+                "agencyComponent",
+                "agentComponent",
+                "alarmsSensorsComponent",
+                "callComponent",
+                "callbackComponent",
+                "dispatchComponent",
+                "eidoVersion",
+                "emergencyResourceComponent",
+                "incidentComponent",
+                "issuingElementIdentification",
+                "linkComponent",
+                "locationComponent",
+                "mergeComponent",
+                "notesComponent",
+                "personComponent",
+                "vehicleComponent"
+            ],
+            "title": "CunningProperties"
+        },
+        "Context": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "properties": {
+                    "$ref": "#/definitions/ContextProperties"
+                }
+            },
+            "required": [
+                "description",
+                "properties",
+                "type"
+            ],
+            "title": "Context"
+        },
+        "ContextProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "@vocab": {
+                    "$ref": "#/definitions/Vocab"
+                }
+            },
+            "required": [
+                "@vocab"
+            ],
+            "title": "ContextProperties"
+        },
+        "Vocab": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "$ref": "#/definitions/IDType"
+                },
+                "enum": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "enum",
+                "type"
+            ],
+            "title": "Vocab"
+        },
+        "EmergencyResourceType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/EmergencyResourceTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "EmergencyResourceType"
+        },
+        "EmergencyResourceTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/MagentaProperties"
+                }
+            },
+            "required": [],
+            "title": "EmergencyResourceTypeAllOf"
+        },
+        "MagentaProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "eta": {
+                    "$ref": "#/definitions/LastUpdateTimeStamp"
+                },
+                "emergencyResourceTypeCommonRegistryText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "emergencyResourceTypeInternalText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "resourceAttributeRegistryText": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "emergencyResourceName": {
+                    "$ref": "#/definitions/ID"
+                },
+                "primaryUnitStatusRegistryText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "secondaryUnitStatusRegistryText": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "unitStatusInternal": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "agentReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "unitLocationReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "unitDestinationReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "personReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "vehicleReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "agentReference",
+                "emergencyResourceName",
+                "emergencyResourceTypeCommonRegistryText",
+                "emergencyResourceTypeInternalText",
+                "eta",
+                "notesReference",
+                "personReference",
+                "primaryUnitStatusRegistryText",
+                "resourceAttributeRegistryText",
+                "secondaryUnitStatusRegistryText",
+                "unitDestinationReference",
+                "unitLocationReference",
+                "unitStatusInternal",
+                "vehicleReference"
+            ],
+            "title": "MagentaProperties"
+        },
+        "IncidentInformationType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/IncidentInformationTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "IncidentInformationType"
+        },
+        "IncidentInformationTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/FriskyProperties"
+                }
+            },
+            "required": [],
+            "title": "IncidentInformationTypeAllOf"
+        },
+        "FriskyProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "incidentTypeInternalCode": {
+                    "$ref": "#/definitions/ID"
+                },
+                "incidentTypeInternalText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "incidentTypeCommonRegistryText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "incidentStatusInternalText": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "incidentStatusCommonRegistryText": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "internalIncidentId": {
+                    "$ref": "#/definitions/Schema"
+                },
+                "agentReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "locationReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "personReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "vehicleReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "documentIdentification": {
+                    "$ref": "#/definitions/DocumentIdentification"
+                },
+                "reportNumberType": {
+                    "$ref": "#/definitions/Schema"
+                },
+                "incidentPriorityInternalText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "incidentCommonPriorityNumber": {
+                    "$ref": "#/definitions/LastUpdateTimeStamp"
+                },
+                "beatOrDispatchGroupText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "dispositionComponent": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "agentReference",
+                "beatOrDispatchGroupText",
+                "dispositionComponent",
+                "documentIdentification",
+                "incidentCommonPriorityNumber",
+                "incidentPriorityInternalText",
+                "incidentStatusCommonRegistryText",
+                "incidentStatusInternalText",
+                "incidentTypeCommonRegistryText",
+                "incidentTypeInternalCode",
+                "incidentTypeInternalText",
+                "internalIncidentId",
+                "locationReference",
+                "notesReference",
+                "personReference",
+                "reportNumberType",
+                "vehicleReference"
+            ],
+            "title": "FriskyProperties"
+        },
+        "DocumentIdentification": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "$ref": "#/definitions/NotesReferenceType"
+                },
+                "items": {
+                    "$ref": "#/definitions/Schema"
+                }
+            },
+            "required": [
+                "items",
+                "type"
+            ],
+            "title": "DocumentIdentification"
+        },
+        "DirectionCodeSimpleType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/definitions/IDType"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "example": {
+                    "type": "string"
+                },
+                "enum": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "description",
+                "enum",
+                "example",
+                "title",
+                "type"
+            ],
+            "title": "DirectionCodeSimpleType"
+        },
+        "LinkInformationType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LinkInformationTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "LinkInformationType"
+        },
+        "LinkInformationTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/MischievousProperties"
+                }
+            },
+            "required": [],
+            "title": "LinkInformationTypeAllOf"
+        },
+        "MischievousProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "incidentTrackingIdentifier": {
+                    "$ref": "#/definitions/ID"
+                },
+                "transactionReasonText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "involvedAgencyReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "linkDirectionCode": {
+                    "$ref": "#/definitions/LinkDirectionCode"
+                }
+            },
+            "required": [
+                "incidentTrackingIdentifier",
+                "involvedAgencyReference",
+                "linkDirectionCode",
+                "transactionReasonText"
+            ],
+            "title": "MischievousProperties"
+        },
+        "LocationInformationType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/LocationInformationTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "LocationInformationType"
+        },
+        "LocationInformationTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/BraggadociousProperties"
+                }
+            },
+            "required": [],
+            "title": "LocationInformationTypeAllOf"
+        },
+        "BraggadociousProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "locationTypeDescriptionRegistryText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "locationByValue": {
+                    "$ref": "#/definitions/ID"
+                },
+                "locationDescriptionText": {
+                    "$ref": "#/definitions/ID"
+                },
+                "locationByReferenceUrl": {
+                    "$ref": "#/definitions/LastUpdateTimeStamp"
+                },
+                "crossStreetByValue": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "crossStreetByReferenceUrl": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "intersectingStreetByValue": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "intersectingStreetByReferenceUrl": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "cellTowerSectorId": {
+                    "$ref": "#/definitions/ID"
+                },
+                "additionalDataReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "additionalDataReference",
+                "cellTowerSectorId",
+                "crossStreetByReferenceUrl",
+                "crossStreetByValue",
+                "intersectingStreetByReferenceUrl",
+                "intersectingStreetByValue",
+                "locationByReferenceUrl",
+                "locationByValue",
+                "locationDescriptionText",
+                "locationTypeDescriptionRegistryText",
+                "notesReference"
+            ],
+            "title": "BraggadociousProperties"
+        },
+        "MergeInformationType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MergeInformationTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "MergeInformationType"
+        },
+        "MergeInformationTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties1"
+                }
+            },
+            "required": [],
+            "title": "MergeInformationTypeAllOf"
+        },
+        "Properties1": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "incidentTrackingIdentifier": {
+                    "$ref": "#/definitions/ID"
+                },
+                "incidentMergeDirectionCode": {
+                    "$ref": "#/definitions/LinkDirectionCode"
+                }
+            },
+            "required": [
+                "incidentMergeDirectionCode",
+                "incidentTrackingIdentifier"
+            ],
+            "title": "Properties1"
+        },
+        "NotesType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/NotesTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "NotesType"
+        },
+        "NotesTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties2"
+                }
+            },
+            "required": [],
+            "title": "NotesTypeAllOf"
+        },
+        "Properties2": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "notesActionComments": {
+                    "$ref": "#/definitions/ID"
+                },
+                "agentReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                }
+            },
+            "required": [
+                "agentReference",
+                "notesActionComments"
+            ],
+            "title": "Properties2"
+        },
+        "PersonInformationType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PersonInformationTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "PersonInformationType"
+        },
+        "PersonInformationTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties3"
+                }
+            },
+            "required": [],
+            "title": "PersonInformationTypeAllOf"
+        },
+        "Properties3": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ncPersonComponent": {
+                    "$ref": "#/definitions/LinkDirectionCode"
+                },
+                "personIncidentRoleRegistryText": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "callIdentifier": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "additionalDataReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "locationReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "callBackReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                }
+            },
+            "required": [
+                "additionalDataReference",
+                "callBackReference",
+                "callIdentifier",
+                "locationReference",
+                "ncPersonComponent",
+                "notesReference",
+                "personIncidentRoleRegistryText"
+            ],
+            "title": "Properties3"
+        },
+        "PrologueType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "type": {
+                    "type": "string"
+                },
+                "properties": {
+                    "$ref": "#/definitions/PrologueTypeProperties"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description",
+                "properties",
+                "required",
+                "title",
+                "type"
+            ],
+            "title": "PrologueType"
+        },
+        "PrologueTypeProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$id": {
+                    "$ref": "#/definitions/ID"
+                },
+                "lastUpdateTimeStamp": {
+                    "$ref": "#/definitions/LastUpdateTimeStamp"
+                },
+                "updatedByAgencyReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                },
+                "updatedByAgentReference": {
+                    "$ref": "#/definitions/UpdatedByAgencyReference"
+                }
+            },
+            "required": [
+                "$id",
+                "lastUpdateTimeStamp",
+                "updatedByAgencyReference",
+                "updatedByAgentReference"
+            ],
+            "title": "PrologueTypeProperties"
+        },
+        "ReferenceType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/ReferenceTypeProperties"
+                }
+            },
+            "required": [
+                "properties",
+                "required",
+                "title"
+            ],
+            "title": "ReferenceType"
+        },
+        "ReferenceTypeProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "$ref": "#/definitions/ID"
+                }
+            },
+            "required": [
+                "$ref"
+            ],
+            "title": "ReferenceTypeProperties"
+        },
+        "UpdatedCBNType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/UpdatedCBNTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "description",
+                "title"
+            ],
+            "title": "UpdatedCBNType"
+        },
+        "UpdatedCBNTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties4"
+                }
+            },
+            "required": [],
+            "title": "UpdatedCBNTypeAllOf"
+        },
+        "Properties4": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "updatedCbnIdentifierUri": {
+                    "$ref": "#/definitions/LastUpdateTimeStamp"
+                },
+                "updatedCbnCallerDescription": {
+                    "$ref": "#/definitions/ID"
+                }
+            },
+            "required": [
+                "updatedCbnCallerDescription",
+                "updatedCbnIdentifierUri"
+            ],
+            "title": "Properties4"
+        },
+        "VehicleInformationType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "allOf": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/VehicleInformationTypeAllOf"
+                    }
+                }
+            },
+            "required": [
+                "allOf",
+                "title"
+            ],
+            "title": "VehicleInformationType"
+        },
+        "VehicleInformationTypeAllOf": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$ref": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties5"
+                }
+            },
+            "required": [],
+            "title": "VehicleInformationTypeAllOf"
+        },
+        "Properties5": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ncVehicleComponent": {
+                    "$ref": "#/definitions/LinkDirectionCode"
+                },
+                "vehicleRelationshipType": {
+                    "$ref": "#/definitions/AgencyRoleDescriptionRegistryText"
+                },
+                "vehicleRelationshipTimeStamp": {
+                    "$ref": "#/definitions/LastUpdateTimeStamp"
+                },
+                "additionalDataReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "locationReference": {
+                    "$ref": "#/definitions/NotesReference"
+                },
+                "notesReference": {
+                    "$ref": "#/definitions/NotesReference"
+                }
+            },
+            "required": [
+                "additionalDataReference",
+                "locationReference",
+                "ncVehicleComponent",
+                "notesReference",
+                "vehicleRelationshipTimeStamp",
+                "vehicleRelationshipType"
+            ],
+            "title": "Properties5"
+        },
+        "Info": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "contact": {
+                    "$ref": "#/definitions/Contact"
+                },
+                "version": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "contact",
+                "description",
+                "title",
+                "version"
+            ],
+            "title": "Info"
+        },
+        "Contact": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email",
+                "name"
+            ],
+            "title": "Contact"
+        },
+        "Paths": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "/EIDO/{IncidentId}": {
+                    "$ref": "#/definitions/EIDOIncidentID"
+                }
+            },
+            "required": [
+                "/EIDO/{IncidentId}"
+            ],
+            "title": "Paths"
+        },
+        "EIDOIncidentID": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "get": {
+                    "$ref": "#/definitions/Get"
+                }
+            },
+            "required": [
+                "get"
+            ],
+            "title": "EIDOIncidentID"
+        },
+        "Get": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "summary": {
+                    "type": "string"
+                },
+                "operationId": {
+                    "type": "string"
+                },
+                "parameters": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Parameter"
+                    }
+                },
+                "responses": {
+                    "$ref": "#/definitions/Responses"
+                }
+            },
+            "required": [
+                "operationId",
+                "parameters",
+                "responses",
+                "summary",
+                "tags"
+            ],
+            "title": "Get"
+        },
+        "Parameter": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "in": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "schema": {
+                    "$ref": "#/definitions/Schema"
+                }
+            },
+            "required": [
+                "description",
+                "in",
+                "name",
+                "required",
+                "schema"
+            ],
+            "title": "Parameter"
+        },
+        "Responses": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "200": {
+                    "$ref": "#/definitions/200"
+                }
+            },
+            "required": [
+                "200"
+            ],
+            "title": "Responses"
+        },
+        "Content": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "application/json": {
+                    "$ref": "#/definitions/ApplicationJSON"
+                }
+            },
+            "required": [
+                "application/json"
+            ],
+            "title": "Content"
+        },
+        "ApplicationJSON": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "schema": {
+                    "$ref": "#/definitions/LinkDirectionCode"
+                }
+            },
+            "required": [
+                "schema"
+            ],
+            "title": "ApplicationJSON"
+        },
+        "Server": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http",
+                        "https"
+                    ]
+                }
+            },
+            "required": [
+                "url"
+            ],
+            "title": "Server"
+        },
+        "IDType": {
+            "type": "string",
+            "enum": [
+                "string",
+                "boolean"
+            ],
+            "title": "IDType"
+        },
+        "NotesReferenceType": {
+            "type": "string",
+            "enum": [
+                "array"
+            ],
+            "title": "NotesReferenceType"
+        },
+        "Ref": {
+            "type": "string",
+            "enum": [
+                "#/components/schemas/ReferenceType",
+                "#/components/schemas/UpdatedCBNType",
+                "#/components/schemas/IncidentInformationType"
+            ],
+            "title": "Ref"
+        }
+    }
+}
