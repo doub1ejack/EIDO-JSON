@@ -1,4 +1,14 @@
-# NENA-JSON-EIDO
+Cloned from the 911.gov repo so I could use...
+
+## [» Easily Browse the EIDO Schema](https://json-schema.app/view/%23?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdoub1ejack%2FEIDO-JSON%2Fmain%2FSchema%2Fopenapi.json)
+
+.. particularly the [Schema Properties](https://json-schema.app/view/%23/%23%2Fdefinitions%2FComponents/%23%2Fdefinitions%2FSchemas?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdoub1ejack%2FEIDO-JSON%2Fmain%2FSchema%2Fopenapi.json).
+
+(thank you jasonformatter.org)
+.
+
+## NENA-JSON-EIDO
+
 NENA WG JSON based EIDO
 
 - The NENA STA describing the EIDO is located in ".\Documentation"
